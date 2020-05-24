@@ -1,0 +1,11 @@
+{
+  "name": "covid19-tracker",
+  "version": "1.0.0",
+  "description": "COVID19 Tracker App in HTML, CSS & Javascript. Which shows the live world wide cases of Corona Virus.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Makdoom Shaikh",
+  "license": "MIT"
+}

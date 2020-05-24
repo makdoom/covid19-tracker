@@ -1,2 +1,91 @@
-<!-- CODE EXPLAINED TUTORIALS -->
-<!-- youtube.com/CodeExplained -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <title>COVID19 Tracker</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/logo1.png" alt="logo" />
+        <p>COVID19 <span>Tracker</span></p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <div class="change-country">Change</div>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img close="close" src="img/close.svg" alt="" />
+              </div>
+              <div class="country-list">
+                <!-- <ul id="list-0">
+                  <li>India</li>
+                </ul>
+                <ul id="list-0">
+                  <li>India</li>
+                </ul>
+                <ul id="list-0">
+                  <li>India</li>
+                </ul> -->
+              </div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+          </div>
+
+          <div class="recovered">
+            <div class="title">Total Recoverd</div>
+            <div class="value">7456</div>
+            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+          </div>
+
+          <div class="deaths">
+            <div class="title">Total Deaths</div>
+            <div class="value">7456</div>
+            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <canvas id="lineChart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p>Copyright &copy; 2020 All Rights Reserved by Makdoom Shaikh</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

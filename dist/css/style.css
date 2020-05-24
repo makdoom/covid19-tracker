@@ -1,14 +1,261 @@
-/* ---------------------------------------------- */
-/*            CODE EXPLAINED TUTORIALS            */
-/*         www.youtube.com/CodeExplained          */
-/* ---------------------------------------------- */
+/* Get Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
 
-/* ---------------------------------------------- */
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #383838;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+}
+
+.hide {
+    display: none;
+}
+
+.fade-in {
+    animation: fade 0.4 ease-in-out;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* #1cff39
+#22caff */
+
+/* Header section */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    /* background: #cccc; */
+    max-width: 1200px;
+    width: 100%;
+    height: 60px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.logo p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    color: linear-gradient(to right, , );
+    padding-left: 6px;
+}
+
+.logo p span {
+    color: #fff;
+}
+
+nav {
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li:last-child {
+    padding-right: 20px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 20px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #22caff, #1cff39);
+    transition: .4s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+/* Main section */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats {
+    width: 100%;
+    /* background-image:linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(../img/bg.jpg);
+    background-size: cover; */
+}
+
+/* Latest Report */
+.latest-report {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.country, .total-cases, .recovered, .deaths {
+    height: 100px;
+}
+
+.name {
+    color:#22caff;
+    font-size: 1.8rem;
+}
+
+.change-country {
+    cursor: pointer;
+}
+
+.title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.value {
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.recovered .value {
+    color: #1cff39;
+}
+
+.deaths .value {
+    color: red;
+}
+
+.new-value {
+    font-size: 1rem;
+}
+
+.fas {
+    font-size: .9rem;
+}
+
+/* Chart Element */
+.chart {
+    width: 80%;
+    height: 50vh;
+    min-height: 470px;
+    margin: 0 auto;
+    padding: 50px 0;
+
+}
+
+.search-country {
+    position: relative;
+    top: 10px;
+}
+
+.search-box{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height:30px;
+    background: #111;
+    z-index: 1;
+}
+
+.search-box input {
+    width: 360px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.search-box img {
+    width: 20px;
+    padding-right: 5px;
+    cursor:  pointer;
+}
+
+
+/* Country List */
+.country-list {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 30px;
+    width: 400px;
+    height:300px;
+    background:#111;
+    opacity: .9;
+    overflow-y: scroll;
+}
+
+.country-list ul {
+    width: 100%;
+}
+.country-list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 7px;
+    color:#fff;
+}
+
+.country-list ul li:hover{
+    border-left: 2px solid #fff;
+}
+
+footer {
+    max-width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /*                  LOAD FONTS                    */
+
 /* ---------------------------------------------- */
 
 /* ---------------------------------------------- */
 /*                    GENERAL                     */
+
 /* ---------------------------------------------- */
 
 /* ---------------------------------------------- */

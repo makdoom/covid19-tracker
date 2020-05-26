@@ -40,37 +40,33 @@
                   id="search-input"
                   placeholder="Search Country..."
                 />
-                <img close="close" src="img/close.svg" alt="" />
+                <img class="close" src="img/close.svg" alt="" />
               </div>
-              <div class="country-list">
-                <!-- <ul id="list-0">
-                  <li>India</li>
-                </ul>
-                <ul id="list-0">
-                  <li>India</li>
-                </ul>
-                <ul id="list-0">
-                  <li>India</li>
-                </ul> -->
-              </div>
+              <div class="country-list"></div>
             </div>
           </div>
           <div class="total-cases">
             <div class="title">Total Cases</div>
             <div class="value">0</div>
-            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+            <div class="new-value">
+              <i class="fas fa-arrow-up"></i> <span class="newValue"></span>
+            </div>
           </div>
 
           <div class="recovered">
             <div class="title">Total Recoverd</div>
             <div class="value">7456</div>
-            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+            <div class="new-value">
+              <i class="fas fa-arrow-up"></i> <span class="newValue"></span>
+            </div>
           </div>
 
           <div class="deaths">
             <div class="title">Total Deaths</div>
             <div class="value">7456</div>
-            <div class="new-value"><i class="fas fa-arrow-up"></i> 0</div>
+            <div class="new-value">
+              <i class="fas fa-arrow-up"></i> <span class="newValue"></span>
+            </div>
           </div>
         </div>
 
@@ -87,5 +83,13 @@
         </div>
       </div>
     </footer>
+    <!-- GeoPlugin API -->
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <script src="js/countries.js"></script>
+    <script src="js/master.js"></script>
   </body>
 </html>

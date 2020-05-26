@@ -17,9 +17,10 @@ body {
 .hide {
     display: none;
 }
-
-.fade-in {
-    animation: fade 0.4 ease-in-out;
+/* 
+.fadeIn {
+    top: 10px;
+    animation: fade 0.8 ease-in-out;
 }
 
 @keyframes fade {
@@ -29,8 +30,29 @@ body {
     100% {
         opacity: 1;
     }
-}
+} */
 
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #383838;
+    
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 40px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }
 /* #1cff39
 #22caff */
 
@@ -194,6 +216,7 @@ main {
     height:30px;
     background: #111;
     z-index: 1;
+    padding: 5px;
 }
 
 .search-box input {
@@ -202,9 +225,9 @@ main {
     border: none;
     outline: none;
     background-color: transparent;
-    padding-left: 15px;
+    padding: 5px 15px;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1px;
 }
 
@@ -242,6 +265,27 @@ main {
     border-left: 2px solid #fff;
 }
 
+/* Scrollbars  */
+/* width */
+.country-list::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  .country-list::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  /* Handle */
+  .country-list::-webkit-scrollbar-thumb {
+    background: #ccc;
+  }
+  
+  /* Handle on hover */
+  .country-list::-webkit-scrollbar-thumb:hover {
+    background: #ffff;
+  }
+
 footer {
     max-width: 1200px;
     height: 40px;
@@ -249,41 +293,16 @@ footer {
     text-align: center;
 }
 
-/*                  LOAD FONTS                    */
 
-/* ---------------------------------------------- */
+/* Media Queries */
+@media screen and (max-width:600px){
+    .latest-report {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .value , .new-value{
+        text-align: center;
+    }
+}
 
-/* ---------------------------------------------- */
-/*                    GENERAL                     */
-
-/* ---------------------------------------------- */
-
-/* ---------------------------------------------- */
-/*                    HEADER                      */
-/* ---------------------------------------------- */
-
-/* -------- LOGO -------- */
-
-/* -------- NAV -------- */
-
-/* ---------------------------------------------- */
-/*                      MAIN                      */
-/* ---------------------------------------------- */
-
-/* -------- BG IMAGE -------- */
-
-/* -------- LATEST REPORT -------- */
-
-/* -------- CHART -------- */
-
-/* -------- SEARCH COUNTRY -------- */
-
-/* SCROLL BAR */
-
-/* ---------------------------------------------- */
-/*                    FOOTER                      */
-/* ---------------------------------------------- */
-
-/* ---------------------------------------------- */
-/*             SCREEN WIDTH < 600px               */
-/* ---------------------------------------------- */

@@ -44,7 +44,7 @@ function fetchData(userCountry) {
           }
           // console.log(country.Country, userCountry);
         }
-        console.log(country);
+        // console.log(country);
       });
     })
     .catch((err) => console.log(err));

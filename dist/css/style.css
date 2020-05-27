@@ -158,13 +158,27 @@ main {
 
 .name {
     color:#22caff;
-    font-size: 1.8rem;
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .change-country {
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 15px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #22caff, #1cff39);
+    color: #fff;
+    transition: .1s;
 }
 
+.change-country:hover {
+    transition: .1s;
+    background: linear-gradient(to right, #17a3ce, #13c22a);
+
+}
 .title {
     font-size: 1.1rem;
     letter-spacing: 1px;
@@ -195,10 +209,11 @@ main {
 /* Chart Element */
 .chart {
     width: 80%;
-    height: 50vh;
-    min-height: 470px;
+    height: 60vh;
+    min-height: 500px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 40px 0;
+    letter-spacing: 1px;
 
 }
 

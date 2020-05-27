@@ -15,7 +15,8 @@ let appdata = [],
   newCasesList = [],
   recoveredList = [],
   deathList = [],
-  newDeathList = [];
+  newDeathList = [],
+  formatedDates = [];
 
 // Get users Country Code
 let countryCode = geoplugin_countryCode();
@@ -55,10 +56,11 @@ function fetchData(userCountry) {
       let dateTempArr = Array.from(dates);
 
       // pushing dates to to dates array
-      for (let i = 0; i < dateTempArr.length / 2; i++) {
+      for (let i = 0; i < dateTempArr.length / 2 - 6; i++) {
         date.push(dateTempArr[i]);
       }
       date.reverse();
+      date.forEach((e) => formatedDates.push(formatDate(e)));
       //   to Create Lists
       date.forEach((ele) => createLists(ele));
     })
@@ -118,16 +120,20 @@ function fetchData(userCountry) {
       newDeathValue.innerHTML = newDeathList[newDeathList.length - 1];
     else newDeathValue.innerHTML = newDeathList[newDeathList.length - 2];
 
-    console.log(recoveredList, newCasesList, newDeathList);
+    console.log(formatedDates);
   }
 }
 
 // function to display chart
 let myChart;
 function linearChart() {
+  let cont = userCountry;
   if (myChart) {
     myChart.destroy();
   }
+  Chart.defaults.global.defaultFontColor = "#e0e0e0";
+  Chart.defaults.global.defaultFontFamily = "Poppins";
+  Chart.defaults.global.defaultFontSize = 14;
   myChart = new Chart(ctx, {
     type: "line",
     data: {
@@ -157,7 +163,7 @@ function linearChart() {
           borderWidth: 1,
         },
       ],
-      labels: date,
+      labels: formatedDates,
     },
     options: {
       responsive: true,
@@ -175,6 +181,27 @@ function clearList() {
   recoveredList.length = 0;
   deathList.length = 0;
   newDeathList.length = 0;
+  formatedDates.length = 0;
 }
 
+// Format Dates
+const monthsName = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+function formatDate(dateString) {
+  let date = new Date(dateString);
+  return `${date.getDate()} ${monthsName[date.getMonth()]}`;
+}
 document.addEventListener("DOMContentLoaded", fetchData(userCountry));

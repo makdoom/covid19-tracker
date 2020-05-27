@@ -225,13 +225,20 @@ function createCountryList() {
       i++;
     }
     document.getElementById(`${ulListId}`).innerHTML += `
-        <li onclick="fecthData('${country.name}')" id="${country.name}">${country.name}</li>
+        <li class="lists" id="${country.name}">${country.name}</li>
     `;
-    // console.log(document.getElementById("ulListId"))
-    // console.log(document.getElementById("ulListId").innerHTML
   });
 }
 createCountryList();
+
+// calling fetchData()
+countryList.addEventListener("click", (e) => {
+  let target = e.target;
+  if (target.classList.contains("lists")) {
+    fetchData(target.innerText);
+    console.log(target.innerText);
+  } else return;
+});
 
 // Show & Hide the country list
 changeCountryBtn.addEventListener("click", () => {
@@ -260,7 +267,6 @@ searchInput.addEventListener("input", () => {
       document.getElementById(country.name).classList.add("hide");
     }
   });
-  //   console.log(input);
 });
 
 // To Resset country List

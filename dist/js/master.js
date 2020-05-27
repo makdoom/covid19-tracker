@@ -16,7 +16,6 @@ let userCountry;
 country_list.forEach((country) => {
   if (countryCode == country.code) {
     userCountry = country.name;
-    // console.log(userCountry);
   }
 });
 
@@ -42,9 +41,7 @@ function fetchData(userCountry) {
           if (totalCase.innerHTML == 0) {
             location.reload();
           }
-          // console.log(country.Country, userCountry);
         }
-        // console.log(country);
       });
     })
     .catch((err) => console.log(err));

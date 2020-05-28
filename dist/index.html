@@ -14,19 +14,23 @@
     <title>COVID19 Tracker</title>
   </head>
   <body>
-    <header>
+    <nav>
       <div class="logo">
         <img src="img/logo1.png" alt="logo" />
-        <p>COVID19 <span>Tracker</span></p>
+        <p>COVID19 Tracker</p>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-    </header>
-
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+      <div class="menu-bg"></div>
+    </nav>
+    <!-- main container -->
     <main>
       <div class="stats">
         <div class="latest-report">
@@ -76,6 +80,24 @@
       </div>
     </main>
 
+    <div class="about-container">
+      <h2>About</h2>
+      <div class="about">
+        <div class="image">
+          <img src="img/final.jpg" alt="" />
+        </div>
+        <div class="about-text">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+            libero molestiae asperiores ipsam sit eaque minus porro doloremque
+            omnis mollitia repellendus similique corporis aspernatur non.
+            Similique atque voluptates harum rerum perferendis ducimus iste,
+            voluptas numquam quod voluptatum tenetur suscipit alias!
+          </p>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="footer-container">
         <div class="copyright">
@@ -93,5 +115,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/countries.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/toggler.js"></script>
   </body>
 </html>

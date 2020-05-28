@@ -12,7 +12,8 @@ body {
     background: #383838;
     font-family: 'Poppins', sans-serif;
     color: #ffff;
-}
+    /* overflow-x: hidden; */
+}   
 
 .hide {
     display: none;
@@ -56,14 +57,94 @@ body {
 /* #1cff39
 #22caff */
 
-/* Header section */
+/* Updated Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    padding: 0 10px; 
+}
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+    padding-left: 6px;
+}
+
+.nav-links{
+    display: flex;
+}
+
+.nav-links li {
+    list-style: none;
+    padding: 0 0px;
+}
+
+.nav-links li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    border-radius: 20px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #22caff, #1cff39);
+    transition: .4s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+
+.burger {
+    display: none;
+    z-index: 2;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #1cff39;
+    margin: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.menu-bg {
+    height: 0;
+    width: 0;
+    background: #fff;
+    z-index: 1;
+    display: none;
+    transition: .4s ease-in-out;
+    border-radius: 50%;
+}
+
+/* Header section */
+/* 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    /* background: #cccc; */
     max-width: 1200px;
     width: 100%;
     height: 60px;
@@ -87,8 +168,6 @@ header {
     color: #fff;
 }
 
-nav {
-}
 
 nav ul {
     display: flex;
@@ -128,7 +207,7 @@ nav ul li a::after{
 nav ul li a:hover::after {
     opacity: 1;
     width: 100%;
-}
+} */
 
 /* Main section */
 main {
@@ -210,7 +289,7 @@ main {
 .chart {
     width: 80%;
     height: 60vh;
-    min-height: 500px;
+    min-height: 470px;
     margin: 0 auto;
     padding: 40px 0;
     letter-spacing: 1px;
@@ -308,9 +387,85 @@ footer {
     text-align: center;
 }
 
+/* About Contaianer */
+.about-container {
+    border: 1px solid red;
+    margin: 30px auto;
+}
 
+.about-container h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 40px 40px 40px ; */
+}
+
+/* .about .image{
+    width:400px;
+    height: 400px;
+    border: 1px solid red;
+
+} */
+
+.image img {
+    width: 250px;
+    border-radius: 50%;
+    height: 250px;
+    /* padding: 30px */
+}
+
+.about-text {
+    padding: 0 50px;
+}
 /* Media Queries */
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
+    body{
+        overflow-X: hidden;
+    }
+   
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+        transition: transform .5s ease-in-out;
+        opacity: 0;
+        z-index: 2;
+    }
+    .nav-links li a {
+        color: #000;
+    }
+    .show {
+        opacity: 1;
+    }
+
+    .burger {
+        display: block;
+        cursor:pointer;
+
+    }
+    
+    .change-bg {
+        position: absolute;
+        right: 8px;
+        top: 18px;
+        display: block;
+        width: 200px;
+        height: 300px;
+        transform: translate(30%, -29%);
+    }
     .latest-report {
         display: flex;
         flex-direction: column;
@@ -321,3 +476,19 @@ footer {
     }
 }
 
+.toggle .line-1 {
+    background: #1cff39;
+    transform: rotate(-45deg) translate(-6px, 7px);
+}
+
+.toggle .line-2 {
+    background: #1cff39;
+    transform: translateX(-30px);
+    background: none;
+}
+
+.toggle .line-3 {
+    background: #1cff39;
+    transform: rotate(45deg) translate(-5px, -6px);
+
+}

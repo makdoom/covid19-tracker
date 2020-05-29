@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "COVID19 Tracker App in HTML, CSS & Javascript. Which shows the live cases of Corona Virus of a particular country in the world.",
   "main": "index.js",
+  "homepage": "https://makdoom.github.io/covid19-tracker",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },

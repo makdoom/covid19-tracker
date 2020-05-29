@@ -18,15 +18,20 @@ let appdata = [],
   newDeathList = [],
   formatedDates = [];
 
-// Get users Country Code
-let countryCode = geoplugin_countryCode();
+let userCountry = "";
 
-let userCountry;
-country_list.forEach((country) => {
-  if (countryCode == country.code) {
-    userCountry = country.name;
-  }
-});
+async function getIP() {
+  const ipUrl = "https://api.ipify.org?format=json";
+  const ipresponse = await fetch(ipUrl);
+  const dataip = await ipresponse.json();
+
+  const infoUrl = `https://ipapi.co/${dataip.ip}/json/`;
+  const response = await fetch(infoUrl);
+  const data = await response.json();
+
+  userCountry = data.country_name;
+  fetchData(userCountry);
+}
 
 function fetchData(userCountry) {
   countryName.innerHTML = "Loading...";
@@ -61,6 +66,7 @@ function fetchData(userCountry) {
       }
       date.reverse();
       date.forEach((e) => formatedDates.push(formatDate(e)));
+
       //   to Create Lists
       date.forEach((ele) => createLists(ele));
     })
@@ -119,8 +125,6 @@ function fetchData(userCountry) {
     if (newDeathList[newDeathList.length - 1] !== "")
       newDeathValue.innerHTML = newDeathList[newDeathList.length - 1];
     else newDeathValue.innerHTML = newDeathList[newDeathList.length - 2];
-
-    console.log(formatedDates);
   }
 }
 
@@ -204,4 +208,4 @@ function formatDate(dateString) {
   let date = new Date(dateString);
   return `${date.getDate()} ${monthsName[date.getMonth()]}`;
 }
-document.addEventListener("DOMContentLoaded", fetchData(userCountry));
+document.addEventListener("DOMContentLoaded", getIP());

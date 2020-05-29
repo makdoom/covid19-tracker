@@ -348,10 +348,12 @@ h2 span {
 
 
 footer {
+    background: #383838;
     max-width: 1200px;
     height: 40px;
-    margin: 0 auto;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

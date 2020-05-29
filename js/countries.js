@@ -236,7 +236,6 @@ countryList.addEventListener("click", (e) => {
   let target = e.target;
   if (target.classList.contains("lists")) {
     fetchData(target.innerText);
-    console.log(target.innerText);
   } else return;
 });
 

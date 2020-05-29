@@ -16,6 +16,7 @@ body {
     background: #1f1f1f;
     font-family: 'Poppins', sans-serif;
     color: #ffff;
+    overflow-x:hidden ;
   
 }   
 
@@ -361,7 +362,7 @@ footer {
 /* Media Queries */
 @media screen and (max-width:768px){
     body{
-        overflow-X: hidden;
+        overflow-x: hidden;
     }
    
     .nav-links {
@@ -371,9 +372,10 @@ footer {
         flex-direction: column;
         justify-content: space-around;
         transition: all .4s ease-out;
-        transform: translateX(125%);
+        transform: translateY(-143%);
         align-items: center;
         min-height: 15vh;
+        z-index: 1;
 
     }
 
@@ -438,7 +440,9 @@ footer {
         text-align: justify;
     }
     footer {
-        margin: 0 20px;
+        padding: 0 20px;
+        font-size: .8rem;
+        text-align: center;
     }
 }
 

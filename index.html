@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome Cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <title>COVID19 Tracker</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="img/logo1.png" alt="logo" />
+        <p>COVID19 Tracker</p>
+      </div>
+      <div class="burger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <!-- main container -->
+    <main>
+      <div class="stats">
+        <div class="latest-report">
+          <div class="country">
+            <div class="name">Loading...</div>
+            <a href="#" class="change-country">Change</a>
+            <div class="search-country hide">
+              <div class="search-box">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search Country..."
+                />
+                <img class="close" src="img/close.svg" alt="" />
+              </div>
+              <div class="country-list"></div>
+            </div>
+          </div>
+          <div class="total-cases">
+            <div class="title">Total Cases</div>
+            <div class="value">0</div>
+            <div class="new-value">
+              <i class="fas fa-arrow-up"></i> <span class="newValue"></span>
+            </div>
+          </div>
+
+          <div class="recovered">
+            <div class="title">Total Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value"></div>
+          </div>
+
+          <div class="deaths">
+            <div class="title">Total Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">
+              <i class="fas fa-arrow-up"></i> <span class="newValue"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart">
+          <canvas id="lineChart"></canvas>
+        </div>
+      </div>
+    </main>
+
+    <div id="about" class="about-container">
+      <h2>Ab<span>ou</span>t</h2>
+      <div class="about">
+        <div class="image">
+          <img src="img/about.jpg" alt="" />
+        </div>
+        <div class="about-text">
+          <p>
+            My name is <strong>Makdoom Shaikh</strong>, I live in Mumbai and I
+            am a self-taught Front End developer. I have often find myself
+            looking for inspiration from coders who don't have any Computer
+            Science degree such as people that have either taught themselves or
+            have gone to bootcamps. This one page website shows the last 30 days
+            record of Corono Virus cases of a particular country in the world.
+            It automatically updated in every two minutes. This project is
+            inspired by Code Explained.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="copyright">
+          <p>Copyright &copy; 2020 All Rights Reserved by Makdoom Shaikh</p>
+        </div>
+      </div>
+    </footer>
+    <!-- GeoPlugin API -->
+    <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script>
+    <!-- Chart js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="js/countries.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/toggler.js"></script>
+  </body>
+</html>

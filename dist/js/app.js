@@ -167,7 +167,7 @@ function linearChart() {
     },
     options: {
       responsive: true,
-      maintainAspectRation: false,
+      maintainAspectRatio: false,
     },
   });
 }

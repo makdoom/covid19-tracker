@@ -1,11 +1,14 @@
 {
   "name": "covid19-tracker",
   "version": "1.0.0",
-  "description": "COVID19 Tracker App in HTML, CSS & Javascript. Which shows the live world wide cases of Corona Virus.",
+  "description": "COVID19 Tracker App in HTML, CSS & Javascript. Which shows the live cases of Corona Virus of a particular country in the world.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Makdoom Shaikh",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }

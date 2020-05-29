@@ -8,7 +8,4 @@ burger.addEventListener("click", () => {
 
   //   show nav-links
   navLinks.classList.toggle("show");
-
-  //   show nav-links
-  menuBg.classList.toggle("change-bg");
 });

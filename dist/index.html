@@ -19,17 +19,17 @@
         <img src="img/logo1.png" alt="logo" />
         <p>COVID19 Tracker</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
       <div class="burger">
         <div class="line-1"></div>
         <div class="line-2"></div>
         <div class="line-3"></div>
       </div>
-      <div class="menu-bg"></div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
     </nav>
+
     <!-- main container -->
     <main>
       <div class="stats">
@@ -60,9 +60,7 @@
           <div class="recovered">
             <div class="title">Total Recovered</div>
             <div class="value">0</div>
-            <div class="new-value">
-              <!-- <i class="fas fa-arrow-up"></i> <span class="newValue"></span> -->
-            </div>
+            <div class="new-value"></div>
           </div>
 
           <div class="deaths">
@@ -80,19 +78,22 @@
       </div>
     </main>
 
-    <div class="about-container">
-      <h2>About</h2>
+    <div id="about" class="about-container">
+      <h2>Ab<span>ou</span>t</h2>
       <div class="about">
         <div class="image">
-          <img src="img/final.jpg" alt="" />
+          <img src="img/about.jpg" alt="" />
         </div>
         <div class="about-text">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
-            libero molestiae asperiores ipsam sit eaque minus porro doloremque
-            omnis mollitia repellendus similique corporis aspernatur non.
-            Similique atque voluptates harum rerum perferendis ducimus iste,
-            voluptas numquam quod voluptatum tenetur suscipit alias!
+            My name is <strong>Makdoom Shaikh</strong>, I live in Mumbai and I
+            am a self-taught Front End developer. I have often find myself
+            looking for inspiration from coders who don't have any Computer
+            Science degree such as people that have either taught themselves or
+            have gone to bootcamps. This one page website shows the last 30 days
+            record of Corono Virus cases of a particular country in the world.
+            It automatically updated in every two minutes. This project is
+            inspired by Code Explained.
           </p>
         </div>
       </div>
